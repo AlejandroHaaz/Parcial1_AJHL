@@ -1,0 +1,68 @@
+#boton1 {
+    text-decoration: none !important;
+}
+
+.text-withoutdecoration{
+    text-decoration: none !important;
+}
+
+.texto-sombreado{
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+  }
+  
+
+li:hover{
+    background-color: rgb(13, 199, 13);
+}
+ 
+.carousel-item img {
+    height: 500px; /* Ajusta  la altura deseada */
+    object-fit: cover; /* Esto hará que la imagen cubra el área sin perder proporción */
+  }
+
+#carouselExampleCaptions2 .carousel-item img {
+    height: 420px; 
+    object-fit: cover; 
+  }
+
+#carouselExampleCaptions3 .carousel-item img {
+    height: 350px; 
+    object-fit: cover; 
+  }
+
+#carouselExampleCaptionsnejamex .carousel-item img {
+    height: 450px; 
+    object-fit: cover; 
+  }
+
+#carouselExampleCaptionsnejamex .carousel-item video {
+    height: 450px; 
+    object-fit: cover; 
+  }
+  #carouselExampleCaptionsnejamex2 .carousel-item img {
+    height: 390px; 
+    object-fit: cover; 
+  }
+
+.carousel-item video {
+    height: 500px; 
+    object-fit: cover; 
+}
+  
+/* Si necesitas ajustar la posición verticalmente */
+.carousel-item {
+    display: flex;
+    align-items: center; /* Esto centra la imagen verticalmente en el contenedor */
+}
