@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-png" href="../IMG/Logo sin fondo.png">
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/slate/bootstrap.min.css" integrity="sha512-x34e+5aPlXi6mZVzBWkJ9sFqBhZuZw6yvWE/Mf//BsZPCk/UHLOmXfxslhX6dcqlQ2tPZi5XWhe763lNVh1Q/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/6f7ee7e618.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Alejandro Haaz</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html"><img src="../IMG/Logo 50x49.png" alt="Mayab"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="../Usuarios/login.html">Mis Recomendaciones
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Recomendaciones</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Fin de Navbar-->
+
+      
+      <!-- Section 1-->
+      <section class="bg-dark text-light mt-0 text-sm-start">
+          <div class="container-fluid">
+              <div class="row align-items-center justify-content-between">
+                  <!-- Columna 1 con Fondo grande -->
+                  <div class="col-lg-6" id="columna-fondo">
+                    
+                  </div>
+                  <!-- Columna 2: Formulario y botones -->
+                  <div class="col mt-0 p-5">
+                      <h1 class="pt-5">Crea tu cuenta</h1>
+                      <!-- Inicio del formulario de register-->
+                      <form id="registerForm">
+                        <fieldset>
+                          <div>
+                            <label class="form-label mt-3">Nombre</label>
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="registerName" placeholder="name@example.com">
+                              <label for="registerName"></label>
+                            </div>
+                              <label class="form-label mt-3">Correo electrónico</label>
+                                <div class="form-floating mb-3">
+                                  <input type="email" class="form-control" id="registerEmail" placeholder="name@example.com">
+                                  <label for="registerEmail"></label>
+                                </div>
+                              <label class="form-label mt-3">Contraseña</label>
+                              <div class="form-floating">
+                                <input type="password" class="form-control" id="registerPassword" placeholder="Password" autocomplete="off">
+                                <label for="registerPassword"></label>
+                              </div>
+                          </div>  
+                            
+                          <div class="my-4">
+                            <button type="submit" class="btn btn-primary" id="ingreso">Enviar</button>
+                        </div>
+
+                        <div id="errorContainer"></div> <!-- Contenedor para errores -->
+
+                        </fieldset>
+                      </form>
+                      <!-- Fin del formulario de register-->
+                      
+                      <!-- Footer-->
+                      <footer class="bg-dark text-light text-center py-3 ">
+                        <div class="container-fluid">
+                            <p class="mb-2">Sígueme en mis redes sociales:</p>
+                            <a href="https://www.facebook.com/alejandro.haazleon.9?mibextid=ZbWKwL" class="text-light text-withoutdecoration me-2"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                            <a href="https://x.com/Hzbrx?t=l2KUPKLQQM2g2HS4OkL67A&s=09" class="text-light text-withoutdecoration me-2"><i class="fa-brands fa-square-x-twitter"></i> Twitter</a>
+                            <a href="https://www.instagram.com/haazbrx_22?igsh=ZDJxaGRzZTZybTQ0" class="text-light text-withoutdecoration me-2"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            <a href="https://www.linkedin.com/in/alejandro-del-jes%C3%BAs-haaz-le%C3%B3n-a647b5242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-light text-withoutdecoration me-2"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <hr>
+                            <p class="mb-0">© 2024 Alejandro del Jesús Haaz León. Todos los derechos reservados.</p>
+                        </div>
+                    </footer>
+                    <!-- Fin de footer-->
+                  </div>
+                  <!-- Fin de columna 2-->
+              </div>
+          </div>
+      </section>
+      <!-- Fin de Section 1-->
+
+      <script src="../Funcionalidades_Users/register.js"></script> <!-- Incluir tu script de login -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

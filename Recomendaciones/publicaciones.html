@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-png" href="../IMG/Logo sin fondo.png">
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/slate/bootstrap.min.css" integrity="sha512-x34e+5aPlXi6mZVzBWkJ9sFqBhZuZw6yvWE/Mf//BsZPCk/UHLOmXfxslhX6dcqlQ2tPZi5XWhe763lNVh1Q/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/6f7ee7e618.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Alejandro Haaz</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html"><img src="../IMG/Logo 50x49.png" alt="Mayab"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="./publicaciones.html">Mis Recomendaciones
+                      <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+
+               <li class="nav-item">
+                    <a class="nav-link" href="./publicaciones_publicas.html">Recomendaciones</a>
+               </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Fin de Navbar-->
+
+      <!-- Section 1-->
+      <section class="bg-dark text-light mt-5 pt-3 text-sm-start">
+        <div class="container">
+            <h1 class="text-center mt-3"> Espacio para recomendaciones</h1>
+            <h2 class="text-center text-secondary my-3">Describe tu experiencia profesional</h2>
+        </div>
+       
+        <p class="text-center">Esto permitirá una publicación más completa y precisa en mi página </p>
+        
+        <!-- Publicación -->
+        <div class="container">
+          <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-6">
+              <form id="publishForms">
+                  <fieldset>
+                     <div class="row">
+                      <!-- Columna para el nombre -->
+                          <div class="form-group">
+                              <label for="exampleInputTitulo" class="form-label">Título</label>
+                              <input type="text" class="form-control" id="exampleInputTitulo" placeholder="">  
+                          </div>
+                      </div>
+                  <div class="row">
+                      <!-- Columna para Fecha de inicio -->
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="exampleInputDate1" class="form-label mt-4">Fecha Inicio</label>
+                              <input type="date" class="form-control" id="exampleInputDate1"  placeholder="">
+                          </div>
+                      </div>
+                      <!-- Columna para Fecha de término -->
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="exampleInputDate2" class="form-label mt-4">Fecha Final</label>
+                            <input type="date" class="form-control" id="exampleInputDate2"  placeholder="">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="exampleDescription" class="form-label mt-4">Descripción</label>
+                      <textarea class="form-control" id="exampleDescription" rows="3"></textarea>
+                  </div>
+                  
+                  <div class="my-4">
+                      <button type="submit" class="btn btn-primary" id="submitBtn">Enviar</button>
+                  </div>
+                  
+                  </fieldset>
+                </form>
+            </div>
+            <div class="col">
+            </div>
+          </div>
+        </div>
+        <!-- Fin de publicación -->
+        <hr>
+        <!-- Contenedor de publicaciones -->
+        <div class="container mt-5">
+          <h2 class="text-center text-secondary my-3">Recomendaciones Publicadas</h2>
+          <div id="postsContainer" class="row">
+              <!-- Aquí se mostrarán las publicaciones -->
+          </div>
+      </div>
+      <!-- Fin de contenedor de publicaciones -->
+
+      </section>
+  <!-- Fin de Section 1-->
+
+  
+  <!-- Para evitar que la fecha de término no sea antes de la fecha inicio seleccionada-->
+  <script>
+    document.getElementById('exampleInputDate1').addEventListener('change', function() {
+        var startDate = this.value;
+        document.getElementById('exampleInputDate2').min = startDate;
+    });
+
+    document.getElementById('exampleInputDate2').addEventListener('change', function() {
+        var endDate = this.value;
+        var startDate = document.getElementById('exampleInputDate1').value;
+        if (endDate < startDate) {
+            alert('La fecha de término no puede ser anterior a la fecha de inicio.');
+            this.value = '';
+        }
+    });
+  </script>
+      
+      <script src="../Funcionalidades_Recom/publicaciones.js"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

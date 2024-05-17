@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/slate/bootstrap.min.css" integrity="sha512-x34e+5aPlXi6mZVzBWkJ9sFqBhZuZw6yvWE/Mf//BsZPCk/UHLOmXfxslhX6dcqlQ2tPZi5XWhe763lNVh1Q/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/6f7ee7e618.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Alejandro Haaz</title>
 </head>
 <body>
@@ -33,11 +34,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="#contacto">Contacto</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Usuarios/login.html">Recomendaciones</a>
+              </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-sm-2" type="search" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -344,109 +344,108 @@
     <!-- Fin de Section 4-->
   
     <!-- Section 5-->
-    <section class="bg-primary text-light text-sm-start">
-    <h1 class="py-2 text-center text-light" id="contacto"> <b>CONTACTO</b></h1>
-    <div class="container">
-        <div class="row">
-          <div class="col">
-          </div>
-          <div class="col-6">
-            <form>
-                <fieldset>
-                  <legend class="text-center">¿Te gustaría conocer más?</legend>
-                  <p class="text-center">Llena el siguiente formulario y me pondré en contacto contigo</p>
-                   <div class="row">
-                    <!-- Columna para el nombre -->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputNombre" class="form-label mt-4">Nombre*</label>
-                            <input type="text" class="form-control" id="exampleInputNombre" placeholder="Nombre">
-                        </div>
-                    </div>
-                    <!-- Columna para el apellido -->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputApellido" class="form-label mt-4">Apellido*</label>
-                            <input type="text" class="form-control" id="exampleInputApellido" placeholder="Apellido">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Columna para el email -->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1" class="form-label mt-4">Email*</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">No compartiremos tu correo con nadie más.</small>
-                        </div>
-                    </div>
-                    <!-- Columna para el número telefónico -->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputNumero" class="form-label mt-4">Teléfono Celular*</label>
-                            <input type="text" class="form-control" id="exampleInputName1" placeholder="10 digitos">
-                        </div>
-                    </div>
-                </div>
-                  
-                <div class="form-group">
-                    <label for="exampleSelectEstado" class="form-label mt-4">Estado de la República*</label>
-                    <select class="form-select" id="exampleSelectEstado">
-                        <option>-Selecciona una opción-</option>
-                        <option>Aguascalientes</option>
-                        <option>Baja California</option>
-                        <option>Baja California Sur</option>
-                        <option>Campeche</option>
-                        <option>Chiapas</option>
-                        <option>Chihuahua</option>
-                        <option>Ciudad de México</option>
-                        <option>Coahuila</option>
-                        <option>Colima</option>
-                        <option>Durango</option>
-                        <option>Estado de México</option>
-                        <option>Guanajuato</option>
-                        <option>Guerrero</option>
-                        <option>Hidalgo</option>
-                        <option>Jalisco</option>
-                        <option>Michoacán</option>
-                        <option>Morelos</option>
-                        <option>Nayarit</option>
-                        <option>Nuevo León</option>
-                        <option>Oaxaca</option>
-                        <option>Puebla</option>
-                        <option>Querétaro</option>
-                        <option>Quintana Roo</option>
-                        <option>San Luis Potosí</option>
-                        <option>Sinaloa</option>
-                        <option>Sonora</option>
-                        <option>Tabasco</option>
-                        <option>Tamaulipas</option>
-                        <option>Tlaxcala</option>
-                        <option>Veracruz</option>
-                        <option>Yucatán</option>
-                        <option>Zacatecas</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                </div>
-                
-                <div class="my-4">
-                    <a href="./gracias.html" class="btn btn-primary" role="button">Enviar</a> 
-                     <!-- <button type="submit" href= "./gracias.html" class="btn btn-primary">Enviar</button> -->
-                </div>
-                
-                </fieldset>
-              </form>
-          </div>
-          <div class="col">
-          </div>
+<section class="bg-primary text-light text-sm-start">
+  <h1 class="py-2 text-center text-light" id="contacto"> <b>CONTACTO</b></h1>
+  <div class="container">
+      <div class="row">
+        <div class="col">
         </div>
-    </section>
-    <!-- Fin de Section 5-->
-
+        <div class="col-6">
+          <form id="contactForm">
+              <fieldset>
+                <legend class="text-center">¿Te gustaría conocer más?</legend>
+                <p class="text-center">Llena el siguiente formulario y me pondré en contacto contigo</p>
+                 <div class="row">
+                  <!-- Columna para el nombre -->
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="exampleInputNombre" class="form-label mt-4">Nombre*</label>
+                          <input type="text" class="form-control" id="exampleInputNombre" placeholder="Nombre">
+                      </div>
+                  </div>
+                  <!-- Columna para el apellido -->
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="exampleInputApellido" class="form-label mt-4">Apellido*</label>
+                          <input type="text" class="form-control" id="exampleInputApellido" placeholder="Apellido">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <!-- Columna para el email -->
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1" class="form-label mt-4">Email*</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-muted">No compartiremos tu correo con nadie más.</small>
+                      </div>
+                  </div>
+                  <!-- Columna para el número telefónico -->
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="exampleInputNumero" class="form-label mt-4">Teléfono Celular*</label>
+                          <input type="text" class="form-control" id="exampleInputNumero" placeholder="10 dígitos">
+                      </div>
+                  </div>
+              </div>
+                
+              <div class="form-group">
+                  <label for="exampleSelectEstado" class="form-label mt-4">Estado de la República*</label>
+                  <select class="form-select" id="exampleSelectEstado">
+                      <option>-Selecciona una opción-</option>
+                      <option>Aguascalientes</option>
+                      <option>Baja California</option>
+                      <option>Baja California Sur</option>
+                      <option>Campeche</option>
+                      <option>Chiapas</option>
+                      <option>Chihuahua</option>
+                      <option>Ciudad de México</option>
+                      <option>Coahuila</option>
+                      <option>Colima</option>
+                      <option>Durango</option>
+                      <option>Estado de México</option>
+                      <option>Guanajuato</option>
+                      <option>Guerrero</option>
+                      <option>Hidalgo</option>
+                      <option>Jalisco</option>
+                      <option>Michoacán</option>
+                      <option>Morelos</option>
+                      <option>Nayarit</option>
+                      <option>Nuevo León</option>
+                      <option>Oaxaca</option>
+                      <option>Puebla</option>
+                      <option>Querétaro</option>
+                      <option>Quintana Roo</option>
+                      <option>San Luis Potosí</option>
+                      <option>Sinaloa</option>
+                      <option>Sonora</option>
+                      <option>Tabasco</option>
+                      <option>Tamaulipas</option>
+                      <option>Tlaxcala</option>
+                      <option>Veracruz</option>
+                      <option>Yucatán</option>
+                      <option>Zacatecas</option>
+                  </select>
+              </div>
+              
+              <div class="form-group">
+                  <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
+                  <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+              </div>
+              
+              <div class="my-4">
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              
+              </fieldset>
+            </form>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+  </section>
+  <!-- Fin de Section 5-->
+  
     <!-- Footer-->
     <footer class="bg-dark text-light text-center py-3 mt-4">
         <div class="container-fluid">
@@ -460,6 +459,39 @@
         </div>
     </footer>
     <!-- Fin de footer-->
+
+    <script>
+      $(document).ready(function() {
+          $('#contactForm').submit(function(event) {
+              event.preventDefault();  // Prevenir el envío tradicional del formulario
+      
+              
+              var formData = {
+                  nombre: $('#exampleInputNombre').val(),
+                  apellido: $('#exampleInputApellido').val(),
+                  email: $('#exampleInputEmail1').val(),
+                  celular: $('#exampleInputNumero').val(),
+                  estadoRepublica: $('#exampleSelectEstado').val(),
+                  mensaje: $('#exampleTextarea').val()
+              };
+      
+              $.ajax({
+                  url: "http://127.0.0.1:5000/api/formularios", // Asegúrate de que la URL es correcta
+                  type: "POST",
+                  contentType: 'application/json',
+                  data: JSON.stringify(formData),
+                  success: function(response) {
+                      alert('Mensaje enviado con éxito');
+                      console.log(response);
+                      $('#contactForm')[0].reset();  // Limpia el formulario después del envío
+                  },
+                  error: function(xhr) {
+                      alert('Error al enviar el mensaje: ' + xhr.responseText);
+                  }
+              });
+          });
+      });
+      </script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
